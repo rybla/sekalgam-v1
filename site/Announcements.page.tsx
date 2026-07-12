@@ -77,9 +77,8 @@ export default function AboutPage() {
     <ArticleLayout title={"Announcements"}>
       <Stack gap="xl" className={classes["container"]}>
         <Text size="md" c="dimmed">
-          {
-            "Stay up to date with the latest news, releases, and developments of the Sekalgam project."
-          }
+          Stay up to date with the latest news, releases, and developments of
+          the Sekalgam project.
         </Text>
 
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">

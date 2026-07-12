@@ -282,9 +282,10 @@ export default function HomePage() {
         <Text>
           <Typography>
             <p>
-              {
-                "Welcome to the interactive showcase of our custom components! Here you can see our component library in action, including our customized progress indicator, an interactive wheel of fortune spinner, and a robust fuzzy-searchable resource index."
-              }
+              Welcome to the interactive showcase of our custom components! Here
+              you can see our component library in action, including our
+              customized progress indicator, an interactive wheel of fortune
+              spinner, and a robust fuzzy-searchable resource index.
             </p>
           </Typography>
         </Text>
