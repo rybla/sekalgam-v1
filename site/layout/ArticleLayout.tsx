@@ -10,7 +10,10 @@ import type { ReactNode } from "react";
  * @param props.children The children elements to render within the main content area.
  * @returns The rendered article layout component.
  */
-export function ArticleLayout(props: { title: string; children?: ReactNode }) {
+export default function ArticleLayout(props: {
+  title: string;
+  children?: ReactNode;
+}) {
   return (
     <div className={classes["layout"]}>
       <Header title={props.title} />

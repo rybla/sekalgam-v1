@@ -1,6 +1,6 @@
 import { Text, Typography } from "@mantine/core";
 import classes from "@site/Announcements.page.module.css";
-import { ArticleLayout } from "@site/layout/ArticleLayout";
+import ArticleLayout from "@site/layout/ArticleLayout";
 
 /**
  * Renders the Announcements page.

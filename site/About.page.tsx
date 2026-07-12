@@ -1,15 +1,7 @@
-import {
-  Badge,
-  Card,
-  Group,
-  SimpleGrid,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
-import { CalendarBlank } from "@phosphor-icons/react";
+import { SimpleGrid, Stack, Text } from "@mantine/core";
 import classes from "@site/About.page.module.css";
-import { ArticleLayout } from "@site/layout/ArticleLayout";
+import AnnouncementCard from "@site/component/AnnouncementCard";
+import ArticleLayout from "@site/layout/ArticleLayout";
 
 interface Announcement {
   id: string;
@@ -70,49 +62,13 @@ export default function AboutPage() {
 
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
           {ANNOUNCEMENTS.map((announcement) => (
-            <Card
+            <AnnouncementCard
               key={announcement.id}
-              withBorder
-              padding="lg"
-              radius="md"
-              className={classes["announcement-card"]}
-            >
-              <Stack gap="xs" h="100%" justify="space-between">
-                <Stack gap="xs">
-                  <Group justify="space-between" align="center">
-                    <Group gap="xs">
-                      <CalendarBlank
-                        size={16}
-                        color="var(--mantine-color-dimmed)"
-                      />
-                      <Text size="xs" c="dimmed" fw={500}>
-                        {announcement.date}
-                      </Text>
-                    </Group>
-                    <Group gap={4}>
-                      {announcement.tags.map((tag) => (
-                        <Badge key={tag} size="xs" variant="light" color="blue">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </Group>
-                  </Group>
-
-                  <Title order={3} size="h4" className={classes["card-title"]}>
-                    {announcement.title}
-                  </Title>
-                </Stack>
-
-                <Text
-                  size="sm"
-                  c="dimmed"
-                  className={classes["card-description"]}
-                  mt="xs"
-                >
-                  {announcement.description}
-                </Text>
-              </Stack>
-            </Card>
+              title={announcement.title}
+              date={announcement.date}
+              tags={announcement.tags}
+              description={announcement.description}
+            />
           ))}
         </SimpleGrid>
       </Stack>

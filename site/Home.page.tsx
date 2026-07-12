@@ -29,7 +29,7 @@ import LoadingBar from "@site/component/LoadingBar";
 import RandomWheel from "@site/component/RandomWheel";
 import SearchableList from "@site/component/SearchableList";
 import classes from "@site/Home.page.module.css";
-import { ArticleLayout } from "@site/layout/ArticleLayout";
+import ArticleLayout from "@site/layout/ArticleLayout";
 
 /**
  * Renders the Home page.

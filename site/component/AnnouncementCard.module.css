@@ -1,0 +1,19 @@
+.card {
+  background-color: var(--mantine-color-body);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.card-title {
+  color: var(--mantine-color-text);
+}
+
+.card-description {
+  line-height: 1.5;
+}
