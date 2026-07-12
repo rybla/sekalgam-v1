@@ -70,6 +70,29 @@ export default defineConfig({
     emptyOutDir: true,
     rolldownOptions: {
       input: ["index.html"],
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("@mantine/core")) {
+              return "mantine";
+            }
+            if (id.includes("@phosphor-icons/react")) {
+              return "phosphor";
+            }
+            if (
+              id.includes("react") ||
+              id.includes("react-dom") ||
+              id.includes("react-router-dom")
+            ) {
+              return "react-vendor";
+            }
+            if (id.includes("shiki") || id.includes("@shikijs")) {
+              return "shiki-vendor";
+            }
+            return "vendor";
+          }
+        },
+      },
     },
   },
   resolve: {

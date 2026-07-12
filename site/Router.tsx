@@ -1,7 +1,8 @@
-import HomePage from "@site/Home.page";
 import { pages } from "@site/meta";
 import { lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const HomePage = lazy(() => import("@site/Home.page"));
 
 const router = createBrowserRouter(
   [
