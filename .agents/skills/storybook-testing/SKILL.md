@@ -1,5 +1,7 @@
 ---
 name: storybook-testing
+description: >
+  Writing vitest tests that integrate with storybook.
 ---
 
 In addition to vitest tests, you must write storybook tests.
