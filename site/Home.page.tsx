@@ -4,7 +4,6 @@ import { ArticleLayout } from "@site/layout/ArticleLayout";
 
 /**
  * Renders the Home page.
- *
  * @returns The rendered Home page component.
  */
 export default function HomePage() {

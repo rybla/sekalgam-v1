@@ -3,7 +3,6 @@ import classes from "@site/component/Footer.module.css";
 
 /**
  * Renders the application footer.
- *
  * @param props The component props.
  * @param props.title The title text to display in the footer.
  * @returns The rendered footer component.

@@ -7,7 +7,6 @@ import { search } from "fast-fuzzy";
 
 /**
  * A fuzzy-searchable list of items, where each item is searched by its key.
- *
  * @param props The component props.
  * @param props.items The list of items to search and render.
  * @param props.placeholder Optional placeholder for the search input.

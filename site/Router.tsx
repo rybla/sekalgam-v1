@@ -33,7 +33,6 @@ const router = createBrowserRouter(
 
 /**
  * Renders the router component configured with all application routes.
- *
  * @returns The rendered RouterProvider component.
  */
 export function Router() {

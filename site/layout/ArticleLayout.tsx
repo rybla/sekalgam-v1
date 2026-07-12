@@ -5,7 +5,6 @@ import type { ReactNode } from "react";
 
 /**
  * An article layout component.
- *
  * @param props The component props.
  * @param props.title The title of the article.
  * @param props.children The children elements to render within the main content area.

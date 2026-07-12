@@ -2,7 +2,6 @@ import classes from "@site/component/LoadingBar.module.css";
 
 /**
  * Renders a loading bar indicator showing progress.
- *
  * @param props The component props.
  * @param props.progress A number ranging from `0` to `1` that encodes the current loading progress, where 0 is no progress and 1 is fully loaded.
  * @returns The rendered loading bar component.

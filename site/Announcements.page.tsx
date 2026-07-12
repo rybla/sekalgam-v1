@@ -4,7 +4,6 @@ import { ArticleLayout } from "@site/layout/ArticleLayout";
 
 /**
  * Renders the Announcements page.
- *
  * @returns The rendered Announcements page component.
  */
 export default function AnnouncementsPage() {

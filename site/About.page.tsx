@@ -4,7 +4,6 @@ import { ArticleLayout } from "@site/layout/ArticleLayout";
 
 /**
  * Renders the About page.
- *
  * @returns The rendered About page component.
  */
 export default function AboutPage() {
