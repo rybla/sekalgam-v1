@@ -1,6 +1,7 @@
 import { Anchor, Group, Title } from "@mantine/core";
 import { pages } from "@site/meta";
 import { Link, useLocation } from "react-router-dom";
+import { ThemeToggle } from "@site/component/ThemeToggle";
 import classes from "@site/component/Header.module.css";
 
 /**
@@ -43,11 +44,13 @@ export function Header(props: { title: string }) {
                   component={Link}
                   to={page.route}
                   className={`${classes["nav-link"]} ${isActive ? classes["nav-link-active"] : ""}`}
+                  data-text={page.name}
                 >
                   {page.name}
                 </Anchor>
               );
             })}
+            <ThemeToggle />
           </Group>
         </nav>
       </Group>

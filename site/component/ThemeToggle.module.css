@@ -1,0 +1,11 @@
+.component {
+  transition: transform 150ms ease;
+}
+
+.component:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  display: block;
+}

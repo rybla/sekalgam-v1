@@ -1,11 +1,12 @@
 import { Anchor, Divider, Group, Stack, Text } from "@mantine/core";
+import packageInfo from "@package.json";
 import {
   ArrowUpIcon,
   GithubLogoIcon,
-  GlobeIcon,
   TwitterLogoIcon,
 } from "@phosphor-icons/react";
 import classes from "@site/component/Footer.module.css";
+import { ThemeToggle } from "@site/component/ThemeToggle";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
@@ -33,7 +34,7 @@ export function Footer(props: { title: string }) {
         <Stack gap={4}>
           <Text className={classes["title"]}>{props.title}</Text>
           <Text className={classes["copyright"]}>
-            © {CURRENT_YEAR} sekalgam. All rights reserved.
+            © {CURRENT_YEAR} {packageInfo.name}. All rights reserved.
           </Text>
         </Stack>
 
@@ -61,18 +62,19 @@ export function Footer(props: { title: string }) {
                 <Text size="sm">GitHub</Text>
               </Group>
             </Anchor>
+            <Anchor
+              href="#top"
+              onClick={handleScrollToTop}
+              className={classes["top-link"]}
+            >
+              <Group gap={4} align="center">
+                <ArrowUpIcon size={16} />
+                <Text size="sm">Back to top</Text>
+              </Group>
+            </Anchor>
           </Group>
 
-          <Anchor
-            href="#top"
-            onClick={handleScrollToTop}
-            className={classes["top-link"]}
-          >
-            <Group gap={4} align="center">
-              <ArrowUpIcon size={16} />
-              <Text size="sm">Back to top</Text>
-            </Group>
-          </Anchor>
+          <ThemeToggle />
         </Group>
       </Group>
     </footer>

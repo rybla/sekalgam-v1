@@ -1,4 +1,5 @@
 import { Box } from "@mantine/core";
+import packageInfo from "@package.json";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Footer } from "@site/component/Footer";
 
@@ -13,7 +14,7 @@ const meta: Meta<typeof Footer> = {
     ),
   ],
   args: {
-    title: "sekalgam",
+    title: packageInfo.name,
   },
 };
 

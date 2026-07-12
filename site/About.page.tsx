@@ -132,7 +132,7 @@ const TECHNOLOGIES: Technology[] = [
  */
 export default function AboutPage() {
   return (
-    <ArticleLayout title={"About This Project"}>
+    <ArticleLayout title={"About"}>
       <Stack gap="xl">
         {/* Intro Section */}
         <Stack gap="xs" className={classes["introSection"]}>

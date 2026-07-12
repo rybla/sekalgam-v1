@@ -1,6 +1,7 @@
 import { Badge, Card, Group, Stack, Text, Title } from "@mantine/core";
 import { CalendarBlankIcon } from "@phosphor-icons/react";
 import classes from "@site/component/AnnouncementCard.module.css";
+import type { ReactNode } from "react";
 
 /**
  * Props for the AnnouncementCard component.
@@ -9,7 +10,7 @@ export interface AnnouncementCardProps {
   /**
    * The title of the announcement.
    */
-  title: string;
+  title: ReactNode;
   /**
    * The date the announcement was published.
    */
@@ -21,7 +22,7 @@ export interface AnnouncementCardProps {
   /**
    * The main body text/description of the announcement.
    */
-  description: string;
+  description: ReactNode;
 }
 
 /**
@@ -30,8 +31,6 @@ export interface AnnouncementCardProps {
  * @returns The rendered AnnouncementCard component.
  */
 export default function AnnouncementCard(props: AnnouncementCardProps) {
-  const { title, date, tags, description } = props;
-
   return (
     <Card withBorder padding="lg" radius="md" className={classes["card"]}>
       <Stack gap="xs" h="100%" justify="space-between">
@@ -43,11 +42,11 @@ export default function AnnouncementCard(props: AnnouncementCardProps) {
                 color="var(--mantine-color-dimmed)"
               />
               <Text size="xs" c="gray.7" fw={500}>
-                {date}
+                {props.date}
               </Text>
             </Group>
             <Group gap={4}>
-              {tags.map((tag) => (
+              {props.tags.map((tag) => (
                 <Badge key={tag} size="xs" variant="light" color="blue">
                   {tag}
                 </Badge>
@@ -56,7 +55,7 @@ export default function AnnouncementCard(props: AnnouncementCardProps) {
           </Group>
 
           <Title order={3} size="h4" className={classes["card-title"]}>
-            {title}
+            {props.title}
           </Title>
         </Stack>
 
@@ -66,7 +65,7 @@ export default function AnnouncementCard(props: AnnouncementCardProps) {
           className={classes["card-description"]}
           mt="xs"
         >
-          {description}
+          {props.description}
         </Text>
       </Stack>
     </Card>
