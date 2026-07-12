@@ -1,3 +1,46 @@
 .footer {
-  padding: var(--mantine-spacing-lg);
+  margin-top: auto;
+  padding-top: var(--mantine-spacing-xl);
+  padding-bottom: var(--mantine-spacing-xl);
+}
+
+.divider {
+  margin-bottom: var(--mantine-spacing-lg);
+  border-color: var(--mantine-color-default-border);
+}
+
+.content {
+  gap: var(--mantine-spacing-md);
+}
+
+.title {
+  font-size: var(--mantine-font-size-md);
+  font-weight: 600;
+  color: var(--mantine-color-text);
+}
+
+.copyright {
+  color: var(--mantine-color-text);
+  font-size: var(--mantine-font-size-xs);
+}
+
+.link {
+  color: var(--mantine-color-text);
+  text-decoration: underline;
+  transition: opacity 150ms ease;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.top-link {
+  color: var(--mantine-color-text);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: opacity 150ms ease;
+}
+
+.top-link:hover {
+  opacity: 0.8;
 }
