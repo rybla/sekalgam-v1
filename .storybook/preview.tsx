@@ -1,7 +1,7 @@
 import { theme } from "@site/theme";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/react-vite";
 import { useEffect } from "react";
 import { useGlobals } from "storybook/preview-api";
 
