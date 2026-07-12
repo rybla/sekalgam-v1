@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { CodeHighlight } from "@mantine/code-highlight";
 import {
   Badge,
   Button,
@@ -30,6 +29,8 @@ import RandomWheel from "@site/component/RandomWheel";
 import SearchableList from "@site/component/SearchableList";
 import classes from "@site/Home.page.module.css";
 import ArticleLayout from "@site/layout/ArticleLayout";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * Renders the Home page.
@@ -195,8 +196,12 @@ export default function HomePage() {
           </Group>
           <Text size="sm" c="dimmed" mb="md">
             Browse our component catalog in isolation. Run{" "}
-            <code>pnpm run storybook</code> in your terminal to open the UI
-            workshop.
+            <CodeHighlight
+              language="shell"
+              radius="md"
+              code={"pnpm run storybook"}
+            ></CodeHighlight>{" "}
+            in your terminal to open the UI workshop.
           </Text>
         </Card>
       ),

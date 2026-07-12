@@ -1,5 +1,59 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: var(--mantine-spacing-xl);
+.introSection {
+  margin-bottom: var(--mantine-spacing-sm);
+}
+
+.sectionTitle {
+  font-weight: 700;
+  color: var(--mantine-color-text);
+}
+
+.subtitle {
+  color: var(--mantine-color-dimmed);
+  line-height: 1.6;
+}
+
+.lineHeight15 {
+  line-height: 1.5;
+}
+
+.uppercaseLabel {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.fullWidthCode {
+  width: 100%;
+}
+
+.footerDivider {
+  border-top: 1px solid var(--mantine-color-default-border);
+}
+
+.techGrid {
+  margin-top: var(--mantine-spacing-sm);
+}
+
+.techCard {
+  background-color: var(--mantine-color-body);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    border-color 150ms ease;
+  cursor: pointer;
+  text-decoration: none;
+  height: 100%;
+}
+
+.techCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--mantine-shadow-sm);
+  border-color: var(--mantine-color-blue-filled);
+}
+
+.quickLinkButton {
+  transition: transform 100ms ease;
+}
+
+.quickLinkButton:hover {
+  transform: scale(1.02);
 }
