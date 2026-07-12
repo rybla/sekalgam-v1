@@ -14,7 +14,7 @@ const sampleHobbies = [
             <Text fw={600} size="sm">
               Gaming
             </Text>
-            <Text size="xs" c="dimmed">
+            <Text size="xs" c="gray.7">
               Playing role-playing games, strategy, and esports.
             </Text>
           </Box>
@@ -32,7 +32,7 @@ const sampleHobbies = [
             <Text fw={600} size="sm">
               Painting & Art
             </Text>
-            <Text size="xs" c="dimmed">
+            <Text size="xs" c="gray.7">
               Watercolors, oil paintings, and digital sketching.
             </Text>
           </Box>
@@ -50,7 +50,7 @@ const sampleHobbies = [
             <Text fw={600} size="sm">
               Music Production
             </Text>
-            <Text size="xs" c="dimmed">
+            <Text size="xs" c="gray.7">
               Synthesizers, audio mixing, and playing instruments.
             </Text>
           </Box>
@@ -97,7 +97,7 @@ export const SimpleBadges: Story = {
         element: (
           <Group justify="space-between">
             <Text size="sm">Apple</Text>
-            <Badge color="red">Red Fruit</Badge>
+            <Badge color="red.8">Red Fruit</Badge>
           </Group>
         ),
       },
@@ -115,7 +115,7 @@ export const SimpleBadges: Story = {
         element: (
           <Group justify="space-between">
             <Text size="sm">Blueberry</Text>
-            <Badge color="blue">Blue Fruit</Badge>
+            <Badge color="blue.9">Blue Fruit</Badge>
           </Group>
         ),
       },

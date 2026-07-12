@@ -94,7 +94,7 @@ export default function RandomWheel<Options extends string[]>({
   if (!options || options.length === 0) {
     return (
       <Paper withBorder p="xl" radius="md" ta="center">
-        <Text c="dimmed">
+        <Text c="gray.7">
           No options available. Please provide a list of options to spin the
           wheel!
         </Text>
@@ -259,7 +259,7 @@ export default function RandomWheel<Options extends string[]>({
       <div className={classes["resultSection"]}>
         {!isSpinning && hasSpun && selectedIndex !== null ? (
           <>
-            <Text size="sm" c="dimmed" fw={500} mb={4}>
+            <Text size="sm" c="gray.7" fw={500} mb={4}>
               The wheel has spoken!
             </Text>
             {selectedIndex !== null && options[selectedIndex] !== undefined && (
@@ -277,11 +277,11 @@ export default function RandomWheel<Options extends string[]>({
             )}
           </>
         ) : isSpinning ? (
-          <Text size="sm" c="dimmed" fw={500}>
+          <Text size="sm" c="gray.7" fw={500}>
             Spinning...
           </Text>
         ) : (
-          <Text size="sm" c="dimmed" fw={500}>
+          <Text size="sm" c="gray.7" fw={500}>
             Click below to spin the wheel!
           </Text>
         )}
@@ -293,7 +293,7 @@ export default function RandomWheel<Options extends string[]>({
         size="lg"
         radius="md"
         variant="filled"
-        color="blue"
+        color="blue.9"
         leftSection={<ArrowClockwise size={20} />}
         px={36}
       >

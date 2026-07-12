@@ -12,6 +12,10 @@ export default function LoadingBar(props: {
    * where `0` is no progress and `1` is fully loaded.
    */
   progress: number;
+  /**
+   * Optional accessible name for the progressbar. Defaults to "Loading progress".
+   */
+  "aria-label"?: string;
 }) {
   const percentage = Math.max(0, Math.min(1, props.progress)) * 100;
 
@@ -22,6 +26,7 @@ export default function LoadingBar(props: {
       aria-valuenow={percentage}
       aria-valuemin={0}
       aria-valuemax={100}
+      aria-label={props["aria-label"] ?? "Loading progress"}
     >
       <svg className={classes["svg"]} width="100%" height="100%">
         <rect className={classes["track"]} width="100%" height="100%" />

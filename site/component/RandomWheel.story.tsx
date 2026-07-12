@@ -72,7 +72,7 @@ export const Interactive: Story = {
         </Text>
         <RandomWheel options={options} onSelect={setSelected} />
         {selected && (
-          <Text size="md" c="blue" fw={600}>
+          <Text size="md" c="blue.9" fw={600}>
             Callback received: Selected "{selected}"!
           </Text>
         )}

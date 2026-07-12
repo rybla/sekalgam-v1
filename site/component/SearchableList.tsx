@@ -77,7 +77,7 @@ export default function SearchableList(props: {
             </div>
           ))
         ) : (
-          <Text c="dimmed" size="sm" ta="center" py="xl">
+          <Text c="gray.7" size="sm" ta="center" py="xl">
             {noResultsMessage}
           </Text>
         )}

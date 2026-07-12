@@ -13,7 +13,6 @@ const dirname =
     ? __dirname
     : path.dirname(fileURLToPath(import.meta.url));
 
-// More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 function multiPageEntrypointsPlugin() {
   const router_path = "./site/Router.tsx";
   const index_path = "./dist/index.html";
