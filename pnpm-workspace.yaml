@@ -58,9 +58,9 @@ minimumReleaseAgeExclude:
   - "@storybook/react-dom-shim@10.5.0"
   - "@storybook/react-vite@10.5.0"
   - "@storybook/react@10.5.0"
-  - '@storybook/addon-vitest@10.5.0'
-  - '@storybook/addon-a11y@10.5.0'
-  - '@storybook/addon-docs@10.5.0'
-  - '@storybook/addon-themes@10.5.0'
+  - "@storybook/addon-vitest@10.5.0"
+  - "@storybook/addon-a11y@10.5.0"
+  - "@storybook/addon-docs@10.5.0"
+  - "@storybook/addon-themes@10.5.0"
   - eslint-plugin-storybook@10.5.0
   - storybook@10.5.0

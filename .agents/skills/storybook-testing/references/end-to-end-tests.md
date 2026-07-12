@@ -16,7 +16,7 @@ A real-life scenario of user flow testing with Playwright would be how to test a
 
 ```ts
 // LoginForm.stories.ts|tsx — CSF 3
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta = {
   component: LoginForm,
@@ -30,18 +30,18 @@ export const EmptyForm: Story = {};
 export const FilledForm: Story = {
   play: async ({ canvas, userEvent }) => {
     // 👇 Simulate interactions with the component
-    await userEvent.type(canvas.getByTestId('email'), 'email@provider.com');
+    await userEvent.type(canvas.getByTestId("email"), "email@provider.com");
 
-    await userEvent.type(canvas.getByTestId('password'), 'a-random-password');
+    await userEvent.type(canvas.getByTestId("password"), "a-random-password");
 
     // See https://storybook.js.org/docs/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
-    await userEvent.click(canvas.getByRole('button'));
+    await userEvent.click(canvas.getByRole("button"));
 
     // 👇 Assert DOM structure
     await expect(
       canvas.getByText(
-        'Everything is perfect. Your account is ready and we should probably get you started!',
-      ),
+        "Everything is perfect. Your account is ready and we should probably get you started!"
+      )
     ).toBeInTheDocument();
   },
 };
@@ -54,12 +54,14 @@ With Playwright, you can write a test to check if the inputs are filled and matc
 ```js
 // tests/login-form/login.spec.js
 
-test('Login Form inputs', async ({ page }) => {
-  await page.goto('http://localhost:6006/iframe.html?id=components-login-form--example');
-  const email = await page.inputValue('#email');
-  const password = await page.inputValue('#password');
-  await expect(email).toBe('email@provider.com');
-  await expect(password).toBe('a-random-password');
+test("Login Form inputs", async ({ page }) => {
+  await page.goto(
+    "http://localhost:6006/iframe.html?id=components-login-form--example"
+  );
+  const email = await page.inputValue("#email");
+  const password = await page.inputValue("#password");
+  await expect(email).toBe("email@provider.com");
+  await expect(password).toBe("a-random-password");
 });
 ```
 
