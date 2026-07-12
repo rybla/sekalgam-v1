@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "types": ["node", "@testing-library/jest-dom", "vitest/globals"],
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@site/*": ["./site/*"],
+      "@package.json": ["./package.json"],
+      "@test-util": ["./test-util"]
+    }
+  },
+  "include": [
+    "package.json",
+    "src",
+    "exe",
+    "site",
+    "test-util",
+    ".storybook/**/*"
+  ]
+}

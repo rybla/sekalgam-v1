@@ -1,0 +1,55 @@
+allowBuilds:
+  deasync: true
+  esbuild: true
+
+minimumReleaseAge: 5760
+minimumReleaseAgeStrict: false
+
+minimumReleaseAgeExclude:
+  - "@eslint-react/ast@5.13.1"
+  - "@eslint-react/core@5.13.1"
+  - "@eslint-react/eslint-plugin@5.13.1"
+  - "@eslint-react/eslint@5.13.1"
+  - "@eslint-react/jsx@5.13.1"
+  - "@eslint-react/shared@5.13.1"
+  - "@eslint-react/var@5.13.1"
+  - "@types/node@26.1.1"
+  - "@typescript-eslint/eslint-plugin@8.63.0"
+  - "@typescript-eslint/parser@8.63.0"
+  - "@typescript-eslint/project-service@8.63.0"
+  - "@typescript-eslint/scope-manager@8.63.0"
+  - "@typescript-eslint/tsconfig-utils@8.63.0"
+  - "@typescript-eslint/type-utils@8.63.0"
+  - "@typescript-eslint/types@8.63.0"
+  - "@typescript-eslint/typescript-estree@8.63.0"
+  - "@typescript-eslint/utils@8.63.0"
+  - "@typescript-eslint/visitor-keys@8.63.0"
+  - "@typescript/typescript-aix-ppc64@7.0.2"
+  - "@typescript/typescript-darwin-arm64@7.0.2"
+  - "@typescript/typescript-darwin-x64@7.0.2"
+  - "@typescript/typescript-freebsd-arm64@7.0.2"
+  - "@typescript/typescript-freebsd-x64@7.0.2"
+  - "@typescript/typescript-linux-arm64@7.0.2"
+  - "@typescript/typescript-linux-arm@7.0.2"
+  - "@typescript/typescript-linux-loong64@7.0.2"
+  - "@typescript/typescript-linux-mips64el@7.0.2"
+  - "@typescript/typescript-linux-ppc64@7.0.2"
+  - "@typescript/typescript-linux-riscv64@7.0.2"
+  - "@typescript/typescript-linux-s390x@7.0.2"
+  - "@typescript/typescript-linux-x64@7.0.2"
+  - "@typescript/typescript-netbsd-arm64@7.0.2"
+  - "@typescript/typescript-netbsd-x64@7.0.2"
+  - "@typescript/typescript-openbsd-arm64@7.0.2"
+  - "@typescript/typescript-openbsd-x64@7.0.2"
+  - "@typescript/typescript-sunos-x64@7.0.2"
+  - "@typescript/typescript-win32-arm64@7.0.2"
+  - "@typescript/typescript-win32-x64@7.0.2"
+  - eslint-plugin-react-dom@5.13.1
+  - eslint-plugin-react-jsx@5.13.1
+  - eslint-plugin-react-naming-convention@5.13.1
+  - eslint-plugin-react-rsc@5.13.1
+  - eslint-plugin-react-web-api@5.13.1
+  - eslint-plugin-react-x@5.13.1
+  - typescript-eslint@8.63.0
+  - typescript@7.0.2
+  - vite@8.1.4

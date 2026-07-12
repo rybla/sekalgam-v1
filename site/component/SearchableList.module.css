@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mantine-spacing-sm);
+}
+
+.item {
+  width: 100%;
+}

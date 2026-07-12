@@ -1,0 +1,127 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--mantine-spacing-md);
+  padding: var(--mantine-spacing-xl);
+  width: 100%;
+}
+
+.wheelWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  margin: var(--mantine-spacing-md) auto;
+}
+
+.wheelSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+  filter: drop-shadow(0 6px 12px rgb(0 0 0 / 15%));
+}
+
+.pointer {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 24px solid var(--mantine-color-red-filled);
+  filter: drop-shadow(0 4px 6px rgb(0 0 0 / 20%));
+  transform-origin: center top;
+}
+
+@keyframes pointer-wiggle {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  25% {
+    transform: translateX(-50%) rotate(-12deg);
+  }
+
+  75% {
+    transform: translateX(-50%) rotate(12deg);
+  }
+}
+
+.pointerWiggling {
+  animation: pointer-wiggle 0.15s ease-in-out infinite;
+}
+
+.wheelGroup {
+  transform-origin: 200px 200px;
+}
+
+.slice {
+  stroke: var(--mantine-color-body);
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  transition:
+    opacity 300ms ease,
+    stroke 300ms ease;
+}
+
+.sliceSelected {
+  stroke: var(--mantine-color-white);
+  stroke-width: 4px;
+  filter: drop-shadow(0 0 8px rgb(255 255 255 / 50%));
+}
+
+.text {
+  font-family: var(--mantine-font-family);
+  font-size: 13px;
+  font-weight: 700;
+  fill: var(--mantine-color-white);
+  user-select: none;
+  pointer-events: none;
+}
+
+.centerPin {
+  fill: var(--mantine-color-dark-filled);
+  stroke: var(--mantine-color-body);
+  stroke-width: 3px;
+}
+
+.centerPinInner {
+  fill: var(--mantine-color-white);
+}
+
+.outerRing {
+  fill: none;
+  stroke: var(--mantine-color-dark-filled);
+  stroke-width: 6px;
+}
+
+.resultSection {
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultBadge {
+  animation: scale-up 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
