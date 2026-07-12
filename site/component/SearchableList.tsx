@@ -1,9 +1,9 @@
-import { useState } from "react";
-import type { ReactNode } from "react";
 import { CloseButton, Text, TextInput } from "@mantine/core";
-import { MagnifyingGlass } from "@phosphor-icons/react";
+import { MagnifyingGlassIcon } from "@phosphor-icons/react";
 import classes from "@site/component/SearchableList.module.css";
 import { search } from "fast-fuzzy";
+import type { ReactNode } from "react";
+import { useState } from "react";
 
 /**
  * A fuzzy-searchable list of items, where each item is searched by its key.
@@ -57,7 +57,7 @@ export default function SearchableList(props: {
         placeholder={placeholder}
         value={query}
         onChange={(event) => setQuery(event.currentTarget.value)}
-        leftSection={<MagnifyingGlass size={16} />}
+        leftSection={<MagnifyingGlassIcon size={16} />}
         rightSection={
           query ? (
             <CloseButton

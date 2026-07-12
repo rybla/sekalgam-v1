@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Badge, Box, Button, Paper, Stack, Text } from "@mantine/core";
-import { ArrowClockwise } from "@phosphor-icons/react";
+import { ArrowClockwiseIcon } from "@phosphor-icons/react";
 import classes from "@site/component/RandomWheel.module.css";
 
 /**
@@ -294,7 +294,7 @@ export default function RandomWheel<Options extends string[]>({
         radius="md"
         variant="filled"
         color="blue.9"
-        leftSection={<ArrowClockwise size={20} />}
+        leftSection={<ArrowClockwiseIcon size={20} />}
         px={36}
       >
         Spin

@@ -1,7 +1,11 @@
 import { Badge, Box, Card, Group, Text } from "@mantine/core";
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import { GameController, MusicNotes, Palette } from "@phosphor-icons/react";
+import {
+  GameControllerIcon,
+  MusicNotesIcon,
+  PaletteIcon,
+} from "@phosphor-icons/react";
 import SearchableList from "@site/component/SearchableList";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const sampleHobbies = [
   {
@@ -9,7 +13,10 @@ const sampleHobbies = [
     element: (
       <Card withBorder radius="md" p="sm">
         <Group gap="sm">
-          <GameController size={24} color="var(--mantine-color-blue-filled)" />
+          <GameControllerIcon
+            size={24}
+            color="var(--mantine-color-blue-filled)"
+          />
           <Box>
             <Text fw={600} size="sm">
               Gaming
@@ -27,7 +34,7 @@ const sampleHobbies = [
     element: (
       <Card withBorder radius="md" p="sm">
         <Group gap="sm">
-          <Palette size={24} color="var(--mantine-color-teal-filled)" />
+          <PaletteIcon size={24} color="var(--mantine-color-teal-filled)" />
           <Box>
             <Text fw={600} size="sm">
               Painting & Art
@@ -45,7 +52,7 @@ const sampleHobbies = [
     element: (
       <Card withBorder radius="md" p="sm">
         <Group gap="sm">
-          <MusicNotes size={24} color="var(--mantine-color-pink-filled)" />
+          <MusicNotesIcon size={24} color="var(--mantine-color-pink-filled)" />
           <Box>
             <Text fw={600} size="sm">
               Music Production

@@ -15,15 +15,15 @@ import {
   Typography,
 } from "@mantine/core";
 import {
-  ArrowRight,
-  BookOpen,
-  Cpu,
-  Gauge,
-  Gear,
-  Info,
-  Lightning,
-  Megaphone,
-  Play,
+  ArrowRightIcon,
+  BookOpenIcon,
+  CpuIcon,
+  GaugeIcon,
+  GearIcon,
+  InfoIcon,
+  LightningIcon,
+  MegaphoneIcon,
+  PlayIcon,
 } from "@phosphor-icons/react";
 import LoadingBar from "@site/component/LoadingBar";
 import RandomWheel from "@site/component/RandomWheel";
@@ -107,7 +107,7 @@ export default function HomePage() {
         >
           <Group justify="space-between" mb="xs">
             <Group gap="xs">
-              <Info size={24} color="var(--mantine-color-blue-filled)" />
+              <InfoIcon size={24} color="var(--mantine-color-blue-filled)" />
               <Text fw={700} size="lg">
                 About Page
               </Text>
@@ -124,7 +124,7 @@ export default function HomePage() {
             component={Link}
             to="/About"
             variant="outline"
-            rightSection={<ArrowRight size={16} />}
+            rightSection={<ArrowRightIcon size={16} />}
           >
             Go to About
           </Button>
@@ -142,7 +142,10 @@ export default function HomePage() {
         >
           <Group justify="space-between" mb="xs">
             <Group gap="xs">
-              <Megaphone size={24} color="var(--mantine-color-teal-filled)" />
+              <MegaphoneIcon
+                size={24}
+                color="var(--mantine-color-teal-filled)"
+              />
               <Text fw={700} size="lg">
                 Announcements
               </Text>
@@ -160,7 +163,7 @@ export default function HomePage() {
             to="/Announcements"
             variant="outline"
             color="teal"
-            rightSection={<ArrowRight size={16} />}
+            rightSection={<ArrowRightIcon size={16} />}
           >
             Go to Announcements
           </Button>
@@ -178,7 +181,10 @@ export default function HomePage() {
         >
           <Group justify="space-between" mb="xs">
             <Group gap="xs">
-              <BookOpen size={24} color="var(--mantine-color-pink-filled)" />
+              <BookOpenIcon
+                size={24}
+                color="var(--mantine-color-pink-filled)"
+              />
               <Text fw={700} size="lg">
                 Storybook Stories
               </Text>
@@ -206,7 +212,10 @@ export default function HomePage() {
         >
           <Group justify="space-between" mb="xs">
             <Group gap="xs">
-              <Lightning size={24} color="var(--mantine-color-orange-filled)" />
+              <LightningIcon
+                size={24}
+                color="var(--mantine-color-orange-filled)"
+              />
               <Text fw={700} size="lg">
                 Mantine Core
               </Text>
@@ -226,7 +235,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             variant="light"
             color="orange"
-            rightSection={<ArrowRight size={16} />}
+            rightSection={<ArrowRightIcon size={16} />}
           >
             Mantine Docs
           </Button>
@@ -244,7 +253,7 @@ export default function HomePage() {
         >
           <Group justify="space-between" mb="xs">
             <Group gap="xs">
-              <Gear size={24} color="var(--mantine-color-violet-filled)" />
+              <GearIcon size={24} color="var(--mantine-color-violet-filled)" />
               <Text fw={700} size="lg">
                 Vitest Runner
               </Text>
@@ -278,7 +287,7 @@ export default function HomePage() {
         <Divider
           label={
             <Group gap={6}>
-              <Cpu size={16} />
+              <CpuIcon size={16} />
               <Text fw={500} size="xs">
                 Interactive Showcase
               </Text>
@@ -333,7 +342,7 @@ export default function HomePage() {
                       size="xs"
                       variant="light"
                       mt={6}
-                      rightSection={<ArrowRight size={12} />}
+                      rightSection={<ArrowRightIcon size={12} />}
                     >
                       Visit About Page
                     </Button>
@@ -346,7 +355,7 @@ export default function HomePage() {
                       variant="light"
                       color="teal"
                       mt={6}
-                      rightSection={<ArrowRight size={12} />}
+                      rightSection={<ArrowRightIcon size={12} />}
                     >
                       Visit Announcements
                     </Button>
@@ -412,7 +421,7 @@ export default function HomePage() {
                   onClick={handleSimulateClick}
                   disabled={isSimulating}
                   variant="light"
-                  leftSection={<Play size={16} />}
+                  leftSection={<PlayIcon size={16} />}
                   flex={1}
                 >
                   Start Build
@@ -428,7 +437,7 @@ export default function HomePage() {
         <Divider
           label={
             <Group gap={6}>
-              <Gauge size={16} />
+              <GaugeIcon size={16} />
               <Text fw={500} size="xs">
                 Resource Index & Fuzzy Search
               </Text>
