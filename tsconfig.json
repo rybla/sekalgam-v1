@@ -25,6 +25,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@site/*": ["./site/*"],
+      "@exe/*": ["./exe/*"],
       "@package.json": ["./package.json"],
       "@test-util": ["./test-util"]
     }

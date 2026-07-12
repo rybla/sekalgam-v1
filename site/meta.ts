@@ -29,7 +29,7 @@ export const PageName = z.enum(Array.from(Object.keys(pages)));
  */
 export function fromRouteToFilepath(route: string): string {
   if (route === "/") {
-    route = "/home";
+    route = "/Home";
   }
 
   return `./${route}.page.tsx`;
@@ -42,7 +42,7 @@ export function fromRouteToFilepath(route: string): string {
  */
 export function fromFilepathToRoute(filepath: string): string {
   const name = fromFilepathToName(filepath);
-  const route = name === "home" ? "/" : `/${name}`;
+  const route = name === "Home" ? "/" : `/${name}`;
   return route;
 }
 
