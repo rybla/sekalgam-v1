@@ -1,3 +1,32 @@
 .pop-out {
   padding: var(--mantine-spacing-md);
 }
+
+.showcase-paper {
+  background-color: var(--mantine-color-body);
+}
+
+.section-title {
+  color: var(--mantine-color-text);
+}
+
+.progress-label {
+  color: var(--mantine-color-text);
+}
+
+.item-card {
+  background-color: var(--mantine-color-body);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.wheelSelectionContainer {
+  text-align: center;
+  margin-top: var(--mantine-spacing-md);
+}
