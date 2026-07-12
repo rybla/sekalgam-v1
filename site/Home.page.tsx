@@ -1,14 +1,15 @@
 import { Text, Typography } from "@mantine/core";
 import classes from "@site/Home.page.module.css";
-import { NormalLayout } from "@site/layout/NormalLayout";
+import { ArticleLayout } from "@site/layout/ArticleLayout";
 
 /**
  * Renders the Home page.
+ *
  * @returns The rendered Home page component.
  */
 export default function HomePage() {
   return (
-    <NormalLayout title={"Home"}>
+    <ArticleLayout title={"Home"}>
       <Text>
         <Typography>
           <p>
@@ -24,6 +25,6 @@ export default function HomePage() {
           </p>
         </Typography>
       </Text>
-    </NormalLayout>
+    </ArticleLayout>
   );
 }

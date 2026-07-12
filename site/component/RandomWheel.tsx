@@ -5,6 +5,7 @@ import classes from "@site/component/RandomWheel.module.css";
 
 /**
  * Calculates the SVG path string for a single slice of a wheel.
+ *
  * @param index The 0-based index of the slice.
  * @param total The total number of slices in the wheel.
  * @param r The radius of the wheel.

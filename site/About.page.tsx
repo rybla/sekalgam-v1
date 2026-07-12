@@ -1,14 +1,15 @@
 import { Text, Typography } from "@mantine/core";
 import classes from "@site/About.page.module.css";
-import { NormalLayout } from "@site/layout/NormalLayout";
+import { ArticleLayout } from "@site/layout/ArticleLayout";
 
 /**
  * Renders the About page.
+ *
  * @returns The rendered About page component.
  */
 export default function AboutPage() {
   return (
-    <NormalLayout title={"About"}>
+    <ArticleLayout title={"About"}>
       <Text>
         <Typography>
           <p>
@@ -24,6 +25,6 @@ export default function AboutPage() {
           </p>
         </Typography>
       </Text>
-    </NormalLayout>
+    </ArticleLayout>
   );
 }

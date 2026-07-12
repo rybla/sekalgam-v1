@@ -1,14 +1,15 @@
 import { Text, Typography } from "@mantine/core";
 import classes from "@site/Announcements.page.module.css";
-import { NormalLayout } from "@site/layout/NormalLayout";
+import { ArticleLayout } from "@site/layout/ArticleLayout";
 
 /**
  * Renders the Announcements page.
+ *
  * @returns The rendered Announcements page component.
  */
 export default function AnnouncementsPage() {
   return (
-    <NormalLayout title={"Announcements"}>
+    <ArticleLayout title={"Announcements"}>
       <Text>
         <Typography>
           <p>
@@ -24,6 +25,6 @@ export default function AnnouncementsPage() {
           </p>
         </Typography>
       </Text>
-    </NormalLayout>
+    </ArticleLayout>
   );
 }
