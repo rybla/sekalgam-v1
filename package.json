@@ -23,7 +23,9 @@
     "test:watch": "vitest",
     "validate": "pnpm run format && pnpm run lint && pnpm run typecheck && pnpm run depcruise && pnpm run test && pnpm run build",
     "storybook": "storybook dev -p 6006",
-    "deploy": "pnpm run build && ./deploy.sh"
+    "build-storybook": "storybook build",
+    "deploy": "pnpm run build && ./deploy.sh",
+    "chromatic": "pnpm exec chromatic"
   },
   "dependencies": {
     "@mantine/carousel": "^9.4.1",
@@ -70,6 +72,7 @@
     "@vitejs/plugin-react": "^6.0.3",
     "@vitest/browser-playwright": "^4.1.10",
     "@vitest/coverage-v8": "^4.1.10",
+    "chromatic": "^18.0.1",
     "dependency-cruiser": "^18.0.0",
     "eslint": "^10.6.0",
     "eslint-plugin-css-modules": "^2.12.0",
