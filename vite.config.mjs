@@ -1,38 +1,40 @@
 /// <reference types="vitest/config" />
+import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
 import react from "@vitejs/plugin-react";
+import { playwright } from "@vitest/browser-playwright";
 import fs from "fs";
+import { fileURLToPath } from "node:url";
 import path from "path";
 import { defineConfig } from "vite";
 import packageConfig from "./package.json";
 
-function multiPageEntrypointsPlugin() {
-  const log_prefix = `[multi-page-entrypoints]`;
+const dirname =
+  typeof __dirname !== "undefined"
+    ? __dirname
+    : path.dirname(fileURLToPath(import.meta.url));
 
+// More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
+function multiPageEntrypointsPlugin() {
+  const router_path = "./site/Router.tsx";
+  const index_path = "./dist/index.html";
   return {
     name: "multi-page-entrypoints",
     closeBundle() {
-      const router_path = "./site/Router.tsx";
       if (!fs.existsSync(router_path)) {
         console.warn(
           `${log_prefix} Failed to find a React router at "${router_path}", so, skipping multi-page entrypoint generation.`
         );
         return;
       }
-
-      const out_dir = path.join(".", "dist");
-      const index_path = path.join(out_dir, "index.html");
       if (!fs.existsSync(index_path)) {
         console.warn(
           `${log_prefix} Failed to find a index HTML file at "${index_path}", so, skipping multi-page entrypoint generation.`
         );
         return;
       }
-
-      const index_content = fs.readFileSync(index_path, { encoding: "utf-8" });
-
-      console.log(
-        `${log_prefix} Generating entrypoints for each page route...`
-      );
+      const index_content = fs.readFileSync(index_path, {
+        encoding: "utf-8",
+      });
       for (const page_path of fs.globSync("./site/**/*.page.tsx")) {
         const match = page_path.match(/^(?:\.\/)?site\/(.*)\.page\.tsx$/);
         if (!match) {
@@ -42,35 +44,28 @@ function multiPageEntrypointsPlugin() {
           continue;
         }
         const page_route = match[1];
-
         const entrypoint_filepaths = [
-          path.join(out_dir, `${page_route}.html`),
-          path.join(out_dir, page_route, `index.html`),
+          `./dist/${page_route}.html`,
+          `./dist/${page_route}/index.html`,
         ];
         for (const filepath of entrypoint_filepaths) {
-          fs.mkdirSync(path.dirname(filepath), { recursive: true });
-          fs.writeFileSync(filepath, index_content, { encoding: "utf-8" });
+          fs.mkdirSync(path.dirname(filepath), {
+            recursive: true,
+          });
+          fs.writeFileSync(filepath, index_content, {
+            encoding: "utf-8",
+          });
         }
-
-        console.log(
-          `${log_prefix} Successfully generated entrypoints for page route "${page_route}"`
-        );
       }
-
       console.log("");
     },
   };
 }
-
 export default defineConfig({
   base: `/${packageConfig.name}/`,
-
   plugins: [react(), multiPageEntrypointsPlugin()],
-
   root: "site",
-
   cacheDir: path.resolve(__dirname, "node_modules", ".vite"),
-
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
@@ -78,24 +73,37 @@ export default defineConfig({
       input: ["index.html"],
     },
   },
-
   resolve: {
     tsconfigPaths: true,
     alias: {
-      "@site": path.resolve(__dirname, "site"),
+      "@site": path.resolve(dirname, "site"),
     },
   },
-
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: path.resolve(__dirname, "vitest.setup.mjs"),
+    setupFiles: path.resolve(dirname, "vitest.setup.mjs"),
     projects: [
       {
         extends: true,
         plugins: [
-          // storybookTest
+          // The plugin will run tests for the stories defined in your Storybook config
+          // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
+          storybookTest(),
         ],
+        test: {
+          name: "storybook",
+          browser: {
+            enabled: true,
+            headless: true,
+            provider: playwright({}),
+            instances: [
+              {
+                browser: "chromium",
+              },
+            ],
+          },
+        },
       },
     ],
   },
