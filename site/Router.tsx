@@ -1,5 +1,5 @@
+import HomePage from "@site/Home.page";
 import { pages } from "@site/meta";
-import IndexPage from "@site/Home.page";
 import { lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -23,7 +23,7 @@ const router = createBrowserRouter(
     // statically-defined routes
     {
       path: "/",
-      element: <IndexPage />,
+      element: <HomePage />,
     },
   ],
   {

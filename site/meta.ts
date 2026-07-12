@@ -42,7 +42,8 @@ export function fromRouteToFilepath(route: string): string {
  */
 export function fromFilepathToRoute(filepath: string): string {
   const name = fromFilepathToName(filepath);
-  const route = name === "Home" ? "/" : `/${name}`;
+  // const route = name === "Home" ? "/" : `/${name}`;
+  const route = `/${name}`;
   return route;
 }
 

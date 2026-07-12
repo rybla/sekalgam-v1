@@ -105,7 +105,14 @@ const eslint_indexSignaturePropertyAccessRequiresBracketNotation = {
 
 export default defineConfig([
   // Apply global ignores using the new helper to exclude build artifacts and dependencies
-  globalIgnores(["dist", "node_modules", ".agent", "drizzle"]),
+  globalIgnores([
+    "dist",
+    "node_modules",
+    ".agent",
+    "drizzle",
+    "storybook-static",
+    "vitest.shims.d.ts",
+  ]),
   globalIgnores(["!.storybook"], "Include Storybook Directory"),
 
   // Define the main configuration block for TypeScript React files
