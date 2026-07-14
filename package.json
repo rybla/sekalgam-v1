@@ -7,7 +7,7 @@
   "license": "ISC",
   "type": "module",
   "bin": {
-    "green": "exe/greet.ts"
+    "greet": "exe/greet.ts"
   },
   "scripts": {
     "dev": "vite",
