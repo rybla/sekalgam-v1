@@ -1,3 +1,4 @@
+import type { ComponentType } from "react";
 import z from "zod";
 
 export const pages = Object.entries(import.meta.glob("./**/*.page.tsx")).reduce(
@@ -6,7 +7,7 @@ export const pages = Object.entries(import.meta.glob("./**/*.page.tsx")).reduce(
     o[name] = {
       name,
       route: fromFilepathToRoute(filepath),
-      load,
+      load: load as () => Promise<{ default: ComponentType }>,
     };
     return o;
   },
@@ -14,7 +15,7 @@ export const pages = Object.entries(import.meta.glob("./**/*.page.tsx")).reduce(
     [name: string]: {
       name: string;
       route: string;
-      load: () => Promise<unknown>;
+      load: () => Promise<{ default: ComponentType }>;
     };
   }
 );

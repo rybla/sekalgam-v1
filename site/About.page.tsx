@@ -27,7 +27,7 @@ import {
   PackageIcon,
   PaletteIcon,
   ShieldCheckIcon,
-  TerminalIcon,
+  TerminalIcon
 } from "@phosphor-icons/react";
 import classes from "@site/About.page.module.css";
 import ArticleLayout from "@site/layout/ArticleLayout";

@@ -1,32 +1,73 @@
-.pop-out {
-  padding: var(--mantine-spacing-md);
+.container {
+  margin-bottom: var(--mantine-spacing-xl);
 }
 
-.showcase-paper {
-  background-color: var(--mantine-color-body);
+.introSection {
+  margin-bottom: var(--mantine-spacing-xs);
 }
 
-.section-title {
+.sectionTitle {
+  font-weight: 700;
   color: var(--mantine-color-text);
 }
 
-.progress-label {
-  color: var(--mantine-color-text);
+.subtitle {
+  color: var(--mantine-color-dimmed);
+  line-height: 1.6;
 }
 
-.item-card {
+.pageCard {
   background-color: var(--mantine-color-body);
   transition:
     transform 150ms ease,
-    box-shadow 150ms ease;
+    box-shadow 150ms ease,
+    border-color 150ms ease;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.item-card:hover {
+.pageCard:hover {
   transform: translateY(-2px);
   box-shadow: var(--mantine-shadow-sm);
+  border-color: var(--mantine-color-blue-filled);
 }
 
-.wheelSelectionContainer {
-  text-align: center;
-  margin-top: var(--mantine-spacing-md);
+.iconWrapper {
+  transition: transform 150ms ease;
+  flex-shrink: 0;
+}
+
+.pageCard:hover .iconWrapper {
+  transform: scale(1.05);
+}
+
+.cardTitle {
+  color: var(--mantine-color-text);
+  line-height: 1.2;
+}
+
+.cardDescription {
+  line-height: 1.4;
+}
+
+.arrowIcon {
+  color: var(--mantine-color-dimmed);
+  transition:
+    transform 150ms ease,
+    color 150ms ease;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.pageCard:hover .arrowIcon {
+  transform: translateX(4px);
+  color: var(--mantine-color-blue-filled);
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.textContainer {
+  flex: 1;
 }

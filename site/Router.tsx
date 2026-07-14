@@ -9,11 +9,8 @@ const router = createBrowserRouter(
     // automatically generated page routes
     ...Object.entries(pages).map(([_, page]) => {
       const Component = lazy(async () => {
-        const module = (await page.load()) as Record<
-          string,
-          React.ComponentType<unknown>
-        >;
-        return { default: module["default"]! };
+        const module = await page.load();
+        return { default: module.default };
       });
 
       return {
