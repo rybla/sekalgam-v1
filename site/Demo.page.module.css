@@ -1,0 +1,116 @@
+.pop-out {
+  padding: var(--mantine-spacing-md);
+}
+
+.showcase-paper {
+  background-color: var(--mantine-color-body);
+}
+
+.section-title {
+  color: var(--mantine-color-text);
+}
+
+.progress-label {
+  color: var(--mantine-color-text);
+}
+
+.item-card {
+  background-color: var(--mantine-color-body);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.wheelSelectionContainer {
+  text-align: center;
+  margin-top: var(--mantine-spacing-md);
+}
+
+/* Advanced Dashboard Layout Styles */
+
+.stat-card {
+  background-color: var(--mantine-color-body);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--mantine-shadow-md);
+}
+
+.terminal-console {
+  background-color: var(--mantine-color-dark-filled);
+  border-radius: var(--mantine-radius-md);
+  padding: var(--mantine-spacing-md);
+  border: 1px solid var(--mantine-color-dark-light-hover);
+}
+
+.terminal-header {
+  border-bottom: 1px solid var(--mantine-color-dark-light);
+  padding-bottom: var(--mantine-spacing-xs);
+  margin-bottom: var(--mantine-spacing-xs);
+  color: var(--mantine-color-dimmed);
+}
+
+.terminal-viewport {
+  font-family: var(--mantine-font-family-monospace);
+  font-size: var(--mantine-font-size-xs);
+}
+
+.terminal-line {
+  margin-bottom: 4px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.terminal-line-time {
+  color: var(--mantine-color-dimmed);
+  margin-right: 8px;
+}
+
+.terminal-line-info {
+  color: var(--mantine-color-blue-light-color);
+}
+
+.terminal-line-action {
+  color: var(--mantine-color-pink-light-color);
+}
+
+.terminal-line-success {
+  color: var(--mantine-color-teal-light-color);
+}
+
+.terminal-line-warn {
+  color: var(--mantine-color-orange-light-color);
+}
+
+.tip-card {
+  background-color: var(--mantine-color-body);
+}
+
+.nowrap-group {
+  white-space: nowrap;
+}
+
+.stat-title {
+  letter-spacing: 0.5px;
+}
+
+.dark-paper {
+  background-color: var(--mantine-color-dark-filled);
+}
+
+.white-text {
+  color: var(--mantine-color-white);
+}
+
+.clear-btn {
+  color: var(--mantine-color-dimmed);
+}
