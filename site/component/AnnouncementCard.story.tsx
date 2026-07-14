@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import AnnouncementCard from "@site/component/AnnouncementCard";
 
 const meta: Meta<typeof AnnouncementCard> = {
-  title: "Components/AnnouncementCard",
+  title: "Component/AnnouncementCard",
   component: AnnouncementCard,
   decorators: [
     (Story) => (

@@ -68,7 +68,7 @@ const sampleHobbies = [
 ];
 
 const meta: Meta<typeof SearchableList> = {
-  title: "Components/SearchableList",
+  title: "Component/SearchableList",
   component: SearchableList,
   decorators: [
     (Story) => (

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import LoadingBar from "@site/component/LoadingBar";
 
 const meta: Meta<typeof LoadingBar> = {
-  title: "Components/LoadingBar",
+  title: "Component/LoadingBar",
   component: LoadingBar,
   decorators: [
     (Story) => (

@@ -4,7 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import { Header } from "@site/component/Header";
 
 const meta: Meta<typeof Header> = {
-  title: "Components/Header",
+  title: "Component/Header",
   component: Header,
 };
 

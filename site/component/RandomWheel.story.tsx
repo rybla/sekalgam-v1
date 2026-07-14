@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import RandomWheel from "@site/component/RandomWheel";
 
 const meta: Meta<typeof RandomWheel> = {
-  title: "Components/RandomWheel",
+  title: "Component/RandomWheel",
   component: RandomWheel,
   decorators: [
     (Story) => (
