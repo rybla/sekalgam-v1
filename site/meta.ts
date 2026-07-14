@@ -1,7 +1,9 @@
 import type { ComponentType } from "react";
 import z from "zod";
 
-export const pages = Object.entries(import.meta.glob("./**/*.page.tsx")).reduce(
+export const pages = Object.entries(
+  import.meta.glob("./page/**/*.page.tsx")
+).reduce(
   (o, [filepath, load]) => {
     const name = fromFilepathToName(filepath);
     o[name] = {
@@ -33,7 +35,7 @@ export function fromRouteToFilepath(route: string): string {
     route = "/Home";
   }
 
-  return `./${route}.page.tsx`;
+  return `./page/${route}.page.tsx`;
 }
 
 /**
@@ -43,7 +45,6 @@ export function fromRouteToFilepath(route: string): string {
  */
 export function fromFilepathToRoute(filepath: string): string {
   const name = fromFilepathToName(filepath);
-  // const route = name === "Home" ? "/" : `/${name}`;
   const route = `/${name}`;
   return route;
 }
@@ -54,7 +55,9 @@ export function fromFilepathToRoute(filepath: string): string {
  * @returns The extracted logical page name.
  */
 export function fromFilepathToName(filepath: string): string {
-  const name = filepath.match(/(?:\.\/)?(?:site\/)?(.*)\.page\.tsx$/)?.[1];
+  const name = filepath.match(
+    /(?:\.\/)?(?:site\/page\/|page\/)?(.*)\.page\.tsx$/
+  )?.[1];
   if (name === undefined) {
     throw new Error(`Invalid page filepath: ${filepath}`);
   }

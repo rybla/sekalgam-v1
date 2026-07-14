@@ -34,8 +34,8 @@ function multiPageEntrypointsPlugin() {
       const index_content = fs.readFileSync(index_path, {
         encoding: "utf-8",
       });
-      for (const page_path of fs.globSync("./site/**/*.page.tsx")) {
-        const match = page_path.match(/^(?:\.\/)?site\/(.*)\.page\.tsx$/);
+      for (const page_path of fs.globSync("./site/page/**/*.page.tsx")) {
+        const match = page_path.match(/^(?:\.\/)?site\/page\/(.*)\.page\.tsx$/);
         if (!match) {
           console.warn(
             `${log_prefix} Failed to extract page route from page path "${page_path}", so, skipping entrypoint generation`

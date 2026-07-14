@@ -17,7 +17,7 @@ import {
   CpuIcon,
   type Icon,
 } from "@phosphor-icons/react";
-import classes from "@site/Home.page.module.css";
+import classes from "@site/page/Home.page.module.css";
 import ArticleLayout from "@site/layout/ArticleLayout";
 import { Link } from "react-router-dom";
 import { pages } from "@site/meta";

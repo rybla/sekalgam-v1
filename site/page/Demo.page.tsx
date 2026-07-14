@@ -38,7 +38,7 @@ import {
 import LoadingBar from "@site/component/LoadingBar";
 import RandomWheel from "@site/component/RandomWheel";
 import SearchableList from "@site/component/SearchableList";
-import classes from "@site/Demo.page.module.css";
+import classes from "@site/page/Demo.page.module.css";
 import DashboardLayout from "@site/layout/DashboardLayout";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";

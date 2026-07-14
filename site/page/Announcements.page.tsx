@@ -1,6 +1,6 @@
 import { CodeHighlight } from "@mantine/code-highlight";
 import { SimpleGrid, Stack, Text } from "@mantine/core";
-import classes from "@site/About.page.module.css";
+import classes from "@site/page/About.page.module.css";
 import AnnouncementCard from "@site/component/AnnouncementCard";
 import ArticleLayout from "@site/layout/ArticleLayout";
 import type { ReactNode } from "react";

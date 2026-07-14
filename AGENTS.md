@@ -63,7 +63,7 @@ This project uses Vite for bundling and Vitest (with Jest) for testing.
 
 ## Pages
 
-All pages are defined in `.page.tsx` files in `site/`. Each page is a `.tsx` file that has a default export React component. If the page needs styling, then it must define its styles in a `.module.css` file and import that CSS module into the `.tsx` file, where the default import is a namespace called `classes`. See the existing pages at the filepaths `site/**/*.page.tsx` for examples.
+All pages are defined in `.page.tsx` files in `site/page`. Each page is a `.tsx` file that has a default export React component. If the page needs styling, then it must define its styles in a `.module.css` file and import that CSS module into the `.tsx` file, where the default import is a namespace called `classes`. See the existing pages at the filepaths `site/page/**/*.page.tsx` for examples.
 
 ## Components
 

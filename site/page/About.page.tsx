@@ -29,7 +29,7 @@ import {
   ShieldCheckIcon,
   TerminalIcon,
 } from "@phosphor-icons/react";
-import classes from "@site/About.page.module.css";
+import classes from "@site/page/About.page.module.css";
 import ArticleLayout from "@site/layout/ArticleLayout";
 import { Link } from "react-router-dom";
 
