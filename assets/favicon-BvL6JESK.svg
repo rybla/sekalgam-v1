@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Definitions for gradients and clipping paths -->
+  <defs>
+    <!-- Radial gradient to give the 2D circle a 3D spherical appearance -->
+    <radialGradient id="sphereShading" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#000000" stop-opacity="0.1"/>
+      <stop offset="85%" stop-color="#000000" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.95"/>
+    </radialGradient>
+
+    <!-- Clip path to keep all surface details (latitude/longitude lines and text) within the sphere's boundary -->
+    <clipPath id="sphereClip">
+      <circle cx="250" cy="250" r="230" />
+    </clipPath>
+  </defs>
+
+  <!-- Group containing all elements mapped onto the sphere, clipped to a perfect circle -->
+  <g clip-path="url(#sphereClip)">
+
+    <!-- Base backing of the sphere: semi-transparent dark teal to establish volume over transparent backgrounds -->
+    <circle cx="250" cy="250" r="230" fill="#0d2b35" opacity="0.85" />
+
+    <!-- 3D Latitude Ellipses (Grid lines wrapping around the sphere) -->
+    <ellipse cx="250" cy="250" rx="230" ry="60" fill="none" stroke="#207a8a" stroke-width="2" opacity="0.4" />
+    <ellipse cx="250" cy="140" rx="205" ry="50" fill="none" stroke="#207a8a" stroke-width="1.5" opacity="0.3" />
+    <ellipse cx="250" cy="360" rx="205" ry="50" fill="none" stroke="#207a8a" stroke-width="1.5" opacity="0.3" />
+
+    <!-- 3D Longitude Ellipses (Grid lines wrapping vertically around the sphere) -->
+    <ellipse cx="250" cy="250" rx="80" ry="230" fill="none" stroke="#207a8a" stroke-width="2" opacity="0.4" />
+    <ellipse cx="250" cy="250" rx="170" ry="230" fill="none" stroke="#207a8a" stroke-width="1.5" opacity="0.3" />
+
+    <!-- Center Vertical Axis -->
+    <line x1="250" y1="20" x2="250" y2="480" stroke="#207a8a" stroke-width="1.5" opacity="0.3" />
+
+    <!--
+      RENDERED TEXT "SG"
+      Using a bold, clean sans-serif font warped slightly to fit the contours of the sphere.
+      The text uses a vibrant cyan-to-white fill and an outer glow to pop off the sphere's base.
+    -->
+    <g transform="rotate(-6, 250, 250)">
+      <!-- Drop shadow/glow effect for the text -->
+      <text x="250" y="295"
+            font-family="system-ui, -apple-system, sans-serif"
+            font-size="165"
+            font-weight="900"
+            letter-spacing="5"
+            text-anchor="middle"
+            fill="#123d47"
+            opacity="0.9">SG</text>
+
+      <!-- Primary foreground text -->
+      <text x="247" y="292"
+            font-family="system-ui, -apple-system, sans-serif"
+            font-size="165"
+            font-weight="900"
+            letter-spacing="5"
+            text-anchor="middle"
+            fill="#e6ffff"
+            stroke="#00ffff"
+            stroke-width="3"
+            style="text-shadow: 0 0 20px rgba(0, 255, 255, 0.6);">SG</text>
+    </g>
+
+    <!-- 3D Spherical Volume Overlay -->
+    <!-- This overlay applies the radial gradient shadow/specular highlight over the grid and text -->
+    <circle cx="250" cy="250" r="230" fill="url(#sphereShading)" mix-blend-mode="multiply" />
+
+    <!-- Outer Rim Backlight / Rim Glow (Simulating a light source from the top-left) -->
+    <circle cx="250" cy="250" r="229" fill="none" stroke="#66ffff" stroke-width="3" opacity="0.5" />
+  </g>
+</svg>

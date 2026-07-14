@@ -1,0 +1,1 @@
+import{B as e}from"./mantine-CGBy-UOv.js";import{n as t,t as n}from"./Header-vgfLWEIP.js";var r={layout:`_layout_ef4kt_1`,main:`_main_ef4kt_9`},i=e();function a(e){return(0,i.jsxs)(`div`,{className:r.layout,children:[(0,i.jsx)(n,{title:e.title}),(0,i.jsx)(`main`,{className:r.main,children:e.children}),(0,i.jsx)(t,{title:e.title})]})}export{a as t};
