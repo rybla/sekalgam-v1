@@ -87,6 +87,9 @@ export default defineConfig({
               return "react-vendor";
             }
             if (id.includes("shiki") || id.includes("@shikijs")) {
+              if (id.includes("langs") || id.includes("themes")) {
+                return;
+              }
               return "shiki-vendor";
             }
             return "vendor";
@@ -94,6 +97,7 @@ export default defineConfig({
         },
       },
     },
+    chunkSizeWarningLimit: 1000,
   },
   resolve: {
     tsconfigPaths: true,

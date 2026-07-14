@@ -1,10 +1,6 @@
 import { Anchor, Group, Stack, Text } from "@mantine/core";
 import packageInfo from "@package.json";
-import {
-  ArrowUpIcon,
-  GithubLogoIcon,
-  XLogoIcon
-} from "@phosphor-icons/react";
+import { ArrowUpIcon, GithubLogoIcon, XLogoIcon } from "@phosphor-icons/react";
 import classes from "@site/component/Footer.module.css";
 import { ThemeToggle } from "@site/component/ThemeToggle";
 
