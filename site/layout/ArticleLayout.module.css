@@ -1,9 +1,12 @@
 .layout {
+  margin: 0 auto;
   min-height: 100vh;
-  padding: var(--mantine-spacing-md);
   display: flex;
   flex-direction: column;
   gap: var(--mantine-spacing-xl);
   max-width: 900px;
-  margin: 0 auto;
+}
+
+.main {
+  padding: var(--mantine-spacing-md);
 }

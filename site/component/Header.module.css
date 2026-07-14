@@ -1,7 +1,6 @@
 .header {
-  padding-bottom: var(--mantine-spacing-md);
+  padding: var(--mantine-spacing-md);
   border-bottom: 1px solid var(--mantine-color-default-border);
-  margin-bottom: var(--mantine-spacing-sm);
 }
 
 .title {

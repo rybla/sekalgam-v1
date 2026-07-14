@@ -1,4 +1,4 @@
-import { Anchor, Divider, Group, Stack, Text } from "@mantine/core";
+import { Anchor, Group, Stack, Text } from "@mantine/core";
 import packageInfo from "@package.json";
 import {
   ArrowUpIcon,
@@ -24,7 +24,6 @@ export function Footer(props: { title: string }) {
 
   return (
     <footer className={classes["footer"]}>
-      <Divider className={classes["divider"]} />
       <Group
         justify="space-between"
         align="center"

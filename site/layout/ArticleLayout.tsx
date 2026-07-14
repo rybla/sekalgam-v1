@@ -17,7 +17,7 @@ export default function ArticleLayout(props: {
   return (
     <div className={classes["layout"]}>
       <Header title={props.title} />
-      <main>{props.children}</main>
+      <main className={classes["main"]}>{props.children}</main>
       <Footer title={props.title} />
     </div>
   );

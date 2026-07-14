@@ -185,6 +185,8 @@ export default defineConfig([
       // All promises must be awaited. Promises *cannot* be left floating.
       "@typescript-eslint/no-floating-promises": "error",
       "@typescript-eslint/require-await": "off",
+      // Forbid use of deprecated definitions.
+      "@typescript-eslint/no-deprecated": "error",
       // All "eslint-disable" comments must also have a description.
       "@eslint-community/eslint-comments/require-description": "error",
       // Forbids style prop on native HTML elements (e.g., <div style={{...}} />)
