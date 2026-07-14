@@ -49,7 +49,7 @@
   background-color: var(--mantine-color-dark-filled);
   border-radius: var(--mantine-radius-md);
   padding: var(--mantine-spacing-md);
-  border: 1px solid var(--mantine-color-dark-light-hover);
+  border: 1px solid var(--mantine-primary-color-filled);
 }
 
 .terminal-header {
@@ -71,24 +71,24 @@
 }
 
 .terminal-line-time {
-  color: var(--mantine-color-dimmed);
+  color: var(--mantine-color-gray-4);
   margin-right: 8px;
 }
 
 .terminal-line-info {
-  color: var(--mantine-color-blue-light-color);
+  color: var(--mantine-color-blue-3);
 }
 
 .terminal-line-action {
-  color: var(--mantine-color-pink-light-color);
+  color: var(--mantine-color-pink-3);
 }
 
 .terminal-line-success {
-  color: var(--mantine-color-teal-light-color);
+  color: var(--mantine-color-teal-3);
 }
 
 .terminal-line-warn {
-  color: var(--mantine-color-orange-light-color);
+  color: var(--mantine-color-orange-3);
 }
 
 .tip-card {
