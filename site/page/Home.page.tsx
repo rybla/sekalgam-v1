@@ -44,7 +44,7 @@ const PAGE_META: Record<keyof typeof pages, PageMeta> = {
     color: "indigo",
     badge: "System",
   },
-  Announcements: {
+  "About/Announcements": {
     description:
       "Stay up to date with the latest news, releases, and developments of the Sekalgam project.",
     icon: MegaphoneIcon,

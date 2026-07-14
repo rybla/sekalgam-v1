@@ -3,7 +3,7 @@ import packageInfo from "@package.json";
 import {
   ArrowUpIcon,
   GithubLogoIcon,
-  TwitterLogoIcon,
+  XLogoIcon
 } from "@phosphor-icons/react";
 import classes from "@site/component/Footer.module.css";
 import { ThemeToggle } from "@site/component/ThemeToggle";
@@ -46,8 +46,8 @@ export function Footer(props: { title: string }) {
               className={classes["link"]}
             >
               <Group gap={4} align="center">
-                <TwitterLogoIcon size={16} />
-                <Text size="sm">X.com</Text>
+                <XLogoIcon size={16} />
+                <Text size="sm">X</Text>
               </Group>
             </Anchor>
             <Anchor
@@ -68,7 +68,7 @@ export function Footer(props: { title: string }) {
             >
               <Group gap={4} align="center">
                 <ArrowUpIcon size={16} />
-                <Text size="sm">Back to top</Text>
+                <Text size="sm">Top</Text>
               </Group>
             </Anchor>
           </Group>
